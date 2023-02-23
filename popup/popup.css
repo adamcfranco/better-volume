@@ -1,0 +1,76 @@
+html, body {
+    min-height: 100%;
+}
+
+body {
+    width: 300px;
+    background: white;
+    justify-content: center;
+    align-items: center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 14px;
+    padding: 2em;
+    position: relative;
+}
+
+.hidden {
+    display: none !important;
+}
+
+#not-available {
+    width: 100%;
+    text-align: center;
+}
+
+#slider-container {
+    width: 100%;
+    position: relative;
+}
+
+#slider-value {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    pointer-events: none;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+#slider-range {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -0.75em;
+    pointer-events: none;
+}
+#slider-range span {
+    font-weight: bold;
+    color: #bbbbbb;
+}
+
+#slider {
+    width: 100%;
+    outline: none;
+}
+
+#author {
+    position: absolute;
+    bottom: -2em;
+    width: 100%;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    font-size: 0.8em;
+    color: #bbb;
+}
+#author a:link, #author a:visited {
+    color: #bbb;
+}
+
