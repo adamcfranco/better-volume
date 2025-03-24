@@ -1,8 +1,8 @@
 {
 	"manifest_version": 2,
 	"name": "Better Volume",
-	"version": "1.1",
-	"description": "Allows you to set tab volume from 0-600% with 1% increments between 0% and 10%.",
+	"version": "2",
+	"description": "Allows you to set domain volume from 0-600% with 1% increments between 0% and 10%. Volumes are saved between sessions, as well as per domain.",
 	"icons": {
 		"24": "icons/icon_24.png",
 		"32": "icons/icon_32.png",
@@ -16,7 +16,27 @@
 		"persistent": true,
 		"scripts": ["js/background.js"]
 	},
-	"permissions": ["<all_urls>", "tabs", "activeTab"],
+	"content_scripts": [
+		{
+			"all_frames": true,
+			"js": [
+				"js/contentscript.js"
+			],
+			"matches": [
+				"http://*/*",
+				"https://*/*",
+				"file:///*"
+			],
+			"run_at": "document_start",
+			"match_about_blank": true
+		}
+	],
+	"permissions": [
+		"<all_urls>",
+		"tabs",
+		"activeTab",
+		"storage"
+	],
 	"browser_action": {
 		"default_icon": {
 			"24": "icons/icon_24.png",

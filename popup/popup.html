@@ -1,22 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<link rel="stylesheet" href="popup.css" />
-	</head>
-	<body>
-		<div id="slider-container" class="hidden">
+
+<head>
+	<meta charset="UTF-8" />
+	<link rel="stylesheet" href="popup.css" />
+</head>
+
+<body>
+	<div id="view-available" class="view hidden">
+		<button id="settings-button" class="nav-button">⚙️</button>
+		<div id="slider-container">
 			<div id="slider-value">100%</div>
 			<input id="slider" name="slider" type="range" autofocus min="0" max="69" />
 			<div id="slider-range">
 				<span>0%</span>
 				<span>600%</span>
 			</div>
-			<div id="author">Better Volume by&nbsp;<a href="https://www.adamfranco.ca/">Adam Franco</a></div>
 		</div>
-		<div id="not-available">
-			Better Volume is not available on this page.
+		<div id="author">Better Volume v2 by&nbsp;<a href="https://www.adamfranco.ca/">Adam Franco</a></div>
+	</div>
+	<div id="view-settings" class="view hidden">
+		<button id="close-settings-button" class="nav-button">❌</button>
+		<div id="saved-volumes-container">
+			<p id="no-volumes">No volumes saved.</p>
+			<table id="saved-volumes" class="hidden">
+				<colgroup>
+					<col style="width: auto;">
+					<col style="width: 44%;">
+					<col style="width: 44%;">
+				</colgroup>
+				<thead>
+					<tr>
+						<th></th>
+						<th>Domain</th>
+						<th>Volume</th>
+					</tr>
+				</thead>
+				<tbody></tbody>
+			</table>
 		</div>
-		<script src="popup.js"></script>
-	</body>
+	</div>
+	<div id="view-not-available" class="view">
+		Better Volume is not available on this page.
+	</div>
+	<script src="popup.js"></script>
+</body>
+
 </html>
